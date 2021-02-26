@@ -1,0 +1,332 @@
+1.	HTTP e HTML são sinônimos? Justifique.
+
+HTML é a sigla de HyperText Markup Language, expressão inglesa que significa "Linguagem de Marcação de Hipertexto". Consiste em uma linguagem de marcação utilizada para produção de páginas na web, que permite a criação de documentos que podem ser lidos em praticamente qualquer tipo de computador e transmitidos pela internet.
+
+HTTP é sigla de Hyper Text Transfer Protocol, que em português significa "Protocolo de Transferência de Hipertexto". É um protocolo de comunicação entre sistemas de informação que permite a transferência de dados entre redes de computadores, principalmente na World Wide Web(Internet).
+O HTTP é o protocolo utilizado para transferência de páginas HTML do computador para a Internet. Por isso, os endereços dos websites (URL) utilizam no início a expressão "http://", definindo o protocolo usado. Esta informação é necessária para estabelecer a comunicação entre a URL e o servidor Web que armazena os dados, enviando então a página HTML solicitada pelo usuário.
+
+2.	Qual é a tag que define um título na barra de ferramentas do navegador?
+O elemento HTML <header> representa um grupo de suporte introdutório ou navegacional. Pode conter alguns elementos de cabeçalho mas também outros elementos como um logo, seções de cabeçalho, formulário de pesquisa, e outros.
+
+3.	Explique a diferença entre erros sintáticos e semânticos. Mostre um exemplo de cada. 
+Erro Sintático: Uma estrutura se - então e digita F e a sintaxe do comando é IF isso é um erro sintático. Esses erros que estão relacionados a sintaxe identificam termos que não fazem parte da linguagem.
+Erro Semântico: em um while (Expressão), nesse expressão deve ter um valor lógico que retorna TRUE ou FALSE. Se inserir uma operação como 1+1, irá gerar um erro semântico porque a estrutura estava esperando um valor lógico. 
+
+4.	 HTML é uma linguagem de marcação. Esta frase está correta? Justifique sua resposta.
+Sim é correta, porque HTML apenas encapsula dados e descreve o que fazer com eles, não como fazer.
+
+
+
+5. Para o objeto <a href="logout.php">Clique aqui para sair</a>, responda:
+
+a.	Tag de início
+b.	Tag de fim
+c.	>>> Conteúdo do objeto <<<
+d.	Tem parâmetros?
+
+
+
+
+
+6.	Observe o código do arquivo aula.html:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Exercícios de Desenvolvimento Web</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Primeiro Trimestre</h1>
+<p>Neste trimestre aprendemos HTML.</p>
+</body>
+</html>
+
+
+Desenhe o resultado que será exibido quando o arquivo aula.html for aberto no navegador.
+
+ 
+
+
+7 . Qual é a tag utilizada para a criação de links? Exemplifique o uso desta tag alterando o código do exercício anterior, inserindo um link para a página do IFC Blumenau (http://blumenau.ifc.edu.br), que abra em uma nova janela, e cujo conteúdo clicável seja “IFC Blumenau”.
+
+Tag usada: <a>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Exercícios de Desenvolvimento Web</title>
+<meta charset="utf-8">
+</head>
+<body>
+<h1>Primeiro Trimestre</h1>
+<p>Neste trimestre aprendemos HTML.</p>
+<p><a href= http://blumenau.ifc.edu.br target="_blank" > IFC Blumenau </a> .</p>
+
+</body>
+</html>
+
+
+
+8. Para que servem as tags <ul> e <ol>?
+
+O elemento HTML <ul> (ou elemento HTML de Lista desordenada) representa uma lista de itens sem ordem rígida,
+
+O Elemento HTML <ol> (ou Elemento HTML de lista ordenada) representa uma lista de itens ordenados.
+
+
+
+
+
+9. Crie uma página que utilize a tag <img> para mostrar uma imagem chamada “sun.jpg”. Caso a imagem esteja indisponível, deve ser mostrada a mensagem “Sol”. Coloque a imagem “sun.jpg” no mesmo diretório da página HTML.
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Esta página abre uma imagem</title>
+<meta charset="utf-8">
+</head>
+<body>
+<img src=”sun.jpg” alt=”Sol”>
+
+</body>
+</html
+
+
+
+
+10. Crie uma página que contenha uma lista com suas 4 bandas musicais favoritas. O nome das bandas deve servir como link para o site oficial delas. Abaixo coloque um cabeçalho com o texto “Banda que não gosto” e uma imagem desta banda.
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Esta página exibi minhas bandas favoritas</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+<ul> 
+        <li>><a href= site da band  target="_blank" > Nome da banda </a> </li> 
+              <li>><a href= site da band  target="_blank" > Nome da banda </a> </li> 
+        <li>><a href= site da band  target="_blank" > Nome da banda </a> </li> 
+        <li>><a href= site da band  target="_blank" > Nome da banda </a> </li> 
+    </ul>
+<h2> Banda que não gosto </h2>   
+</body>
+</html
+
+
+
+
+
+11. Pesquise e crie um exemplo que utilize a tag <video>.
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Esta página abre um vídeo</title>
+<meta charset="utf-8">
+</head>
+<body>
+<video width="320" height="240" controls>
+  <source src="trailer.mp4" type="video/mp4">
+  <source src="musicband.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+</body>	
+</html>
+12.	Pesquise e descubra para que serve a tag <pre>. Crie um exemplo de código que utilize esta tag.
+
+HTML texto preformatado (<pre>) é a tag utilizada para representar texto pré-formatado. Um texto dentro desse elemento é tipicamente exibido em uma fonte não proporcional da mesma maneira em que o texto original foi disposto no arquivo. Espaços em branco são mantidos no texto da mesma forma em que este foi digitado. 
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Esta página exibi um texto pre-formatado </title>
+<meta charset="utf-8">
+</head>
+<body>
+<pre> Este texto 
+             Ficara assim
+                 Porque esta pre-formatado </pre>
+
+</body>	
+</html>	
+
+
+
+
+13. Pesquise e descubra para que serve a tag <code>. Crie um exemplo de código que utilize esta tag.
+
+O elemento HTML<code> exibe seu conteúdo estilizado de forma a indicar que o texto é um pequeno fragmento de código de computador. Por padrão, o texto do conteúdo é exibido usando a fonte monoespaçada padrão do agente do usuário .
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Esta página exemplifica o uso do code </title>
+<meta charset="utf-8">
+</head>
+<body>
+
+<p> O método <code> push () </ code> adiciona um ou mais elementos ao final de uma matriz e retorna o novo tamanho da matriz. </ p>
+
+</body>	
+</html>
+
+
+
+
+
+14.	Em relação à HTML, analise as seguintes alternativas:
+
+I) HTML é uma linguagem de marcação interpretada pelo navegador.
+II) Os documentos escritos em HTML são arquivos em formato texto e podem ser criados com a utilização de um editor de texto.
+III) HTML é uma linguagem compilada gerando um código executável que será armazenado em um servidor web.
+IV) HTML é uma linguagem que faz uso de tags que especificam o conteúdo de uma página web.
+
+Assinale a alternativa correta:
+a) Somente as afirmativas I e II estão corretas.
+b) Somente as afirmativas II, III e IV estão corretas.
+>>> c) Somente a afirmativa III está incorreta. <<<
+d) Somente a afirmativa I está correta.
+e) Todas as afirmativas estão incorretas.
+
+
+
+15. Crie uma página HTML que contenha uma tabela com quatro linhas e três colunas. O cabeçalho das colunas deve ser composto por: Nome, Estado Civil e Data de Nascimento.
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Esta página mostra uma tabelea </title>
+<meta charset="utf-8">
+</head>
+<body>
+<table border="1">
+   <tr>
+<td> Nome</td> 
+<td> Estado Civil </td> 
+<td> Data de Nascimento .</td> 
+</tr>
+   <tr>
+<td> 1</td> 
+<td> 2</td> 
+ <td> 3</td> 
+    </tr>
+   <tr>
+<td>1 </td> 
+<td> 2</td> 
+ <td>3 </td> 
+   </tr>
+   <tr>
+<td> 1</td> 
+<td> 2</td> 
+ <td> 3</td> 
+  </tr>
+
+<tr>
+<td> 1</td> 
+<td> 2</td> 
+ <td> 3</td> 
+  </tr>
+</table>
+</body>	
+</html>
+
+
+
+
+16. Descubra como é feita a mesclagem de células em tabelas. Crie um exemplo com mesclagem de células na mesma coluna e na mesma linha.
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Esta página mostra uma tabela </title>
+<meta charset="utf-8">
+</head>
+<body>
+<table border="1">
+   <tr>
+<td> Nome</td> 
+<td> Estado Civil </td> 
+<td colspan="3">Data de Nascimento.</td> 
+</tr>
+   <tr>
+<td> 1</td> 
+<td> 2</td> 
+ <td> 3</td> 
+    </tr>
+   <tr>
+<td>1 </td> 
+<td> 2</td> 
+ <td>3 </td> 
+   </tr>
+   <tr>
+<td> 1</td> 
+<td rowspan="3">2</td> 
+ <td> 3</td> 
+  </tr>
+
+<tr>
+<td> 1</td> 
+<td> 2</td> 
+ <td> 3</td> 
+  </tr>
+</table>
+</body>	
+</html>
+
+
+
+
+
+17. Qual é a diferença entre <em> e <i>?
+		<em> e uma tag para dar ênfase no texto, já o <i> e uma tag para deixar a escrita em itálico.
+
+
+
+
+
+18. A HTML é uma linguagem de marcação utilizada na construção de páginas na Web. O comando de formatação da linguagem para definir um hyperlink indicando que o recurso linkado deve ser aberto em uma nova janela do navegador é:
+a) <a href = "url" target ="_top">meu link</a>
+b) <a href = "url".new>meu link</a>
+c) <a href = "url" target="_blank">meu link</a>
+d) <a href = "url" target ="_parent">meu link</a>
+e) <a href = "url" target ="_self">meu link</a>
+
+
+
+19.	(EXTRA) Pesquise e resuma o que você entende por web cache/browser cache. Qual é a relação existente entre essa técnica e o carregamento de arquivos na web?
+
+`	Pesuisa: “Web cache é um armazenamento temporário no disco rígido de páginas web, imagens e outros documentos e ficheiros utilizando técnicas de cache para reduzir o uso largura de banda disponível, aumentar a velocidade do acesso, entre outras vantagens.” 
+
+	O que entendemos: web cache e um “download” do site no primeiro acesso, para o computador, usando esse “download” quando for fazer acessos futuros, para que os sites tenham carregamento mais rápido em acessos futuros.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+20. (EXTRA) Pesquise pela tag figure e crie um exemplo de uso para demonstrar como ela está relacionada com a tag img (e, eventualmente, com outra(s) tag(s)).
+
+
+<img> Elemento padrão para carregamento de imagens.
+<figure> Elemento para ser usado em conjunto com o elemento <figcaption>. Sua finalidade é para marcar diagramas, ilustrações, fotos, e fragmentos de código (entre outros conteúdos).
+
+
+<figure>
+  <img src="/computador,jpg" alt="Computador">
+  <img src="/drive.jpg" alt="Drive">
+  <img src="/sistema.jpg" alt="Sistema">
+  <figcaption>O que usamos em informatica<a href=" http://blumenau.ifc.edu.br"> Clique aqui</a></figcaption>
+</figure>
+
+
