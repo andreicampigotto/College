@@ -5,7 +5,7 @@ from modelo import Embarcacao
 def padrao():
     return "backend operante"
 
-@app.route("/embarcacoes", methods= ["get"])
+@app.route("/listar_embarcacoes", methods= ["get"])
 def listar_embarcacao():
     embarcacoes = db.session.query(Embarcacao).all()
     retorno = []
