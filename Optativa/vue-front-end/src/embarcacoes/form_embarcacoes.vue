@@ -87,11 +87,11 @@
         name: '/incluir_embarcacao',
         data: () => {
       return {
-       listar_embarcacoes: null
+       incluir_embarcacao: null
       }
   },
   mounted() {
-      axios.get("http://localhost:5000/incluir_embarcacaos").then(response => {
+      axios.post("http://localhost:5000/incluir_embarcacaos").then(response => {
         console.log(response)
         this.incluir_embarcacao = response.data;
         })

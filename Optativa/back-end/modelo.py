@@ -7,10 +7,10 @@ class Embarcacao(db.Model):
     tamanho_pes = db.Column(db.Integer) #para jet nao se aplica
     nome = db.Column(db.String(254))
     observacao = db.Column(db.String(500))
-    
+
     def __str__(self):
         return str(self.id) + "," + self.tipo_embarcacao + ", " + self.fabricante + ", " + \
-               ", " + str(self.tamanho_pes) + self.nome + ", " + self.observacao
+               ", " + str(self.tamanho_pes) + self.nome + ", " + self.observacao 
 
     def json(self):
         return {

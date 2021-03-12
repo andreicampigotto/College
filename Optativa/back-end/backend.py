@@ -20,7 +20,7 @@ def incluir_embarcacao():
     resposta = jsonify ({"resultado" : "ok", "detalhes" : "ok"})
     dados = request.get_json()
     try: #tenta executar a acao e nao esta funcionando
-        nova = Embarcacao(**dados) #cria um novo gabarito
+        nova = Embarcacao(dados) #cria um novo gabarito
         db.session.add(nova) #adiciona no bd
         db.session.commit() #efetiva a gravacao
     except Exception as e : # em caso de erro 
