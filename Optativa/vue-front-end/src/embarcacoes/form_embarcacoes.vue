@@ -7,7 +7,7 @@
           sm="6"
         >
     <v-text-field
-        v-model="model"
+        v-model="nome_embarcacao"
         outlined
         clearable
         label="Name da Embarcação"
@@ -20,7 +20,7 @@
           sm="6"
         >
     <v-text-field
-        v-model="model"
+        v-model="fabricante"
         outlined    
         clearable
         label="Fabricante"
@@ -33,7 +33,7 @@
           sm="6"
         >
     <v-text-field
-        v-model="model"
+        v-model="tipo_embarcacao"
         outlined
         clearable
         label="Tipo da Embarcação"
@@ -46,7 +46,7 @@
           sm="3"
         >
     <v-text-field
-        v-model="model"
+        v-model="tamanho_pes"
         outlined
         clearable
         label="Tamanho da Embarcação"
@@ -58,22 +58,23 @@
           cols="12"
           sm="12"
         >
-    <v-text-field
-        v-model="model"
+    <v-textarea
+        v-model="observacao"
         outlined
         clearable
         label="Observaçōes"
-        @input="embarcacao.tamanho_pes.$touch()"
-    ></v-text-field>
+        @input="embarcacao.observacao.$touch()"
+    ></v-textarea>
 
     <v-btn
-      class="mr-4"
+      class="success mx-0 mt-3"
       @click="submit"
     >
       submit
     </v-btn>
-    <v-btn @click="clear">
-      clear
+    <v-btn color="error mt-3 mx-15"
+      @click="clear">
+      reset
     </v-btn>
     </v-col>
     </v-row>
@@ -87,11 +88,27 @@
         name: '/incluir_embarcacao',
         data: () => {
       return {
-       incluir_embarcacao: null
+       nome_embarcacao: '',
+       fabricante: '',
+       tipo_embarcacao: '',
+       tamanho_pes: '',
+       observacao: ''
+      }
+  },
+  methods: {
+      submit(){
+        console.log(this.nome_embarcacao,this.fabricante, this.tipo_embarcacao, this.tamanho_pes, this.observacao)
+      },
+      clear(){
+        this.nome_embarcacao = '',
+        this.fabricante = '', 
+        this.tipo_embarcacao = '', 
+        this.tamanho_pes = '', 
+        this.observacao = ''
       }
   },
   mounted() {
-      axios.post("http://localhost:5000/incluir_embarcacaos").then(response => {
+      axios.get("http://localhost:5000/incluir_embarcacaos").then(response => {
         console.log(response)
         this.incluir_embarcacao = response.data;
         })
@@ -100,6 +117,4 @@
       });
   }
 }
-
 </script>
-
