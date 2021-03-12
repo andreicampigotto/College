@@ -1,5 +1,6 @@
-import Embarcacoes from "../src/components/listar_embarcacoes.vue";
-import Home from "./components/home.vue";
+import listar_embarcacoes from "./embarcacoes/listar_embarcacoes.vue";
+import form_embarcacoes from "./embarcacoes/form_embarcacoes.vue";
+import Home from "./home/home";
 import Vue from "vue";
 import VueRouter from "vue-router";
 
@@ -7,9 +8,15 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/embarcacoes",
+    path: "/incluir_embarcacao",
+    name: "form_embarcacoes",
+    component: form_embarcacoes,
+  },
+  
+  {
+    path: "/listar_embarcacoes",
     name: "embarcacoes",
-    component: Embarcacoes,
+    component: listar_embarcacoes,
   },
   {
     path: "/",

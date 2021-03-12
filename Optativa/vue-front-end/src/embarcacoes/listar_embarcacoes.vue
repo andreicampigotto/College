@@ -1,9 +1,9 @@
 <template>
-<v-container class="v-container-true" v-if="embarcacoes.length > 0">
+<v-container class="v-container-true" v-if="listar_embarcacoes.length > 0">
   <v-card
     class="mx-auto my-12"
     max-width="374"
-    v-for="embarcacao of embarcacoes" :key="embarcacao.id"
+    v-for="embarcacao of listar_embarcacoes" :key="embarcacao.id"
   >
     <template slot="progress">
       <v-progress-linear
@@ -19,7 +19,7 @@
     <v-card-text>
 
       <div class="my-4 subtitle-1">
-        • Observações
+        • Observações:
       </div>
 
       <div>{{embarcacao.observacao}}</div>
@@ -31,16 +31,16 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'Embarcacoes',
+  name: 'listar_embarcacoes',
   data: () => {
       return {
-        embarcacoes: null
+       listar_embarcacoes: null
       }
   },
   mounted() {
       axios.get("http://localhost:5000/listar_embarcacoes").then(response => {
         console.log(response)
-        this.embarcacoes = response.data;
+        this.listar_embarcacoes = response.data;
         })
       .catch((error) => {
         console.log(error)

@@ -26,13 +26,22 @@
               </v-list-item>
             </router-link>
 
-            <router-link to="/embarcacoes" class="link">
+            <router-link to="listar_embarcacoes" class="link">
               <v-list-item>
                 <v-list-item-title>
                     Embarcações
                 </v-list-item-title>
               </v-list-item>
             </router-link>
+
+             <router-link to="incluir_embarcacao" class="link">
+              <v-list-item>
+                <v-list-item-title>
+                  Inserir Embarcação
+                </v-list-item-title>
+              </v-list-item>
+            </router-link>
+
             </v-list-item-group>
           </v-list>
         </v-navigation-drawer>
