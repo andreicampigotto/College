@@ -2,8 +2,8 @@
 <v-container class="v-container-true" v-if="listar_embarcacoes.length > 0">
   <v-card
     class="mx-auto my-12"
-    max-width="374"
-    v-for="embarcacao of listar_embarcacoes" :key="embarcacao.id"
+    max-width="400"
+    v-for="embarcacao of listar_embarcacoes" :key="embarcacao.ativo === True"
   >
     <template slot="progress">
       <v-progress-linear
@@ -24,6 +24,14 @@
 
       <div>{{embarcacao.observacao}}</div>
     </v-card-text>
+    <v-btn
+        class="ma-1"
+        color="error"
+        solo
+        @click="remove"
+      >
+        Deletar
+      </v-btn>
   </v-card>
  </v-container>
 </template>
@@ -45,6 +53,11 @@ export default {
       .catch((error) => {
         console.log(error)
       });
-  }
+  },
+  methods: {
+    remove(){ 
+   
+    }
+  },
 }
 </script>

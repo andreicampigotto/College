@@ -1,5 +1,6 @@
 <template>
   <form>
+    <h2>Cadastro: </h2>
       <v-container>
       <v-row>
       <v-col
@@ -7,7 +8,7 @@
           sm="6"
         >
     <v-text-field
-        v-model="nome_embarcacao"
+        v-model="nome"
         outlined
         clearable
         label="Name da Embarcação"
@@ -66,16 +67,16 @@
         @input="embarcacao.observacao.$touch()"
     ></v-textarea>
 
-    <v-btn
-      class="success mx-0 mt-3"
-      @click="submit"
-    >
-      submit
-    </v-btn>
-    <v-btn color="error mt-3 mx-15"
-      @click="clear">
-      reset
-    </v-btn>
+      <v-btn
+        class="success mx-0 mt-3"
+        @click="submit"
+      >
+        Submit
+      </v-btn>
+      <v-btn color="error mt-3 mx-15"
+        @click="clear">
+        Reset
+      </v-btn>
     </v-col>
     </v-row>
     </v-container>
@@ -85,36 +86,53 @@
 <script>
     import axios from 'axios'
         export default {
-        name: '/incluir_embarcacao',
-        data: () => {
-      return {
-       nome_embarcacao: '',
-       fabricante: '',
-       tipo_embarcacao: '',
-       tamanho_pes: '',
-       observacao: ''
+          data(){
+        return {
+          nome: '',
+          fabricante: '',
+          tipo_embarcacao: '',
+          tamanho_pes: '',
+          observacao: '',
+          ativo: "True",
       }
   },
   methods: {
       submit(){
-        console.log(this.nome_embarcacao,this.fabricante, this.tipo_embarcacao, this.tamanho_pes, this.observacao)
-      },
+          axios({
+          method: 'post', // verbo http
+          url: 'http://localhost:5000/incluir_embarcacaos', // url
+          data: {
+            nome: this.nome,
+            fabricante: this.fabricante, 
+            tipo_embarcacao: this.tipo_embarcacao, 
+            tamanho_pes: this.tamanho_pes, 
+            observacao: this.observacao, 
+            ativo: this.ativo
+          }
+          })
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+            
+          this.nome= '',
+          this.fabricante= '',
+          this.tipo_embarcacao= '',
+          this.tamanho_pes= '',
+          this.observacao= ''
+        },
       clear(){
-        this.nome_embarcacao = '',
-        this.fabricante = '', 
-        this.tipo_embarcacao = '', 
-        this.tamanho_pes = '', 
-        this.observacao = ''
+        this.nome= '',
+        this.fabricante= '',
+        this.tipo_embarcacao= '',
+        this.tamanho_pes= '',
+        this.observacao= ''
+      },
+      deletarEmbarcacao(){
+        this.ativo = false
       }
-  },
-  mounted() {
-      axios.get("http://localhost:5000/incluir_embarcacaos").then(response => {
-        console.log(response)
-        this.incluir_embarcacao = response.data;
-        })
-      .catch((error) => {
-        console.log(error)
-      });
   }
 }
 </script>
