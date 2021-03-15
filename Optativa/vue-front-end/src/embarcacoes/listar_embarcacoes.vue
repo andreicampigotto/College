@@ -28,7 +28,7 @@
         class="ma-1"
         color="error"
         solo
-        @click="remove"
+        @click="remove(embarcacao.id)"
       >
         Deletar
       </v-btn>
@@ -38,6 +38,7 @@
 
 <script>
 import axios from 'axios'
+axios.defaults.headers.post['Access-Control-Allow-Headers'] ='*';
 export default {
   name: 'listar_embarcacoes',
   data: () => {
@@ -55,8 +56,14 @@ export default {
       });
   },
   methods: {
-    remove(){ 
-   
+    remove(id){ 
+      axios.delete(`http://localhost:5000/excluir_embarcacao/${id}`,{ crossdomain: true }).then(response => {
+        console.log(response)
+        this.listar_embarcacoes.ativo = false
+        })
+      .catch((error) => {
+        console.log(error)
+      });
     }
   },
 }

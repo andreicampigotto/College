@@ -85,6 +85,8 @@
 
 <script>
     import axios from 'axios'
+    axios.defaults.headers.post['Access-Control-Allow-Headers'] ='*';
+    axios.defaults.headers.post['Access-Control-Allow-Origin'] ='*';
         export default {
           data(){
         return {
@@ -93,14 +95,15 @@
           tipo_embarcacao: '',
           tamanho_pes: '',
           observacao: '',
-          ativo: "True",
+          ativo: true,
       }
   },
   methods: {
       submit(){
           axios({
           method: 'post', // verbo http
-          url: 'http://localhost:5000/incluir_embarcacaos', // url
+          url: 'http://localhost:5000/incluir_embarcacao', 
+          headers: { crossdomain: true, 'Access-Control-Allow-Origin' : '*' },
           data: {
             nome: this.nome,
             fabricante: this.fabricante, 
@@ -108,7 +111,7 @@
             tamanho_pes: this.tamanho_pes, 
             observacao: this.observacao, 
             ativo: this.ativo
-          }
+          },
           })
             .then(response => {
                 console.log(response)
