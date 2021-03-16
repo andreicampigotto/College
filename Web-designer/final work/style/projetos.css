@@ -1,0 +1,36 @@
+.projeto-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/img7.png');
+
+    height: 550px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.projeto-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.projeto-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.carousel-projetos{
+    margin-top: 7px;
+}
+
+.projeto-principal .container{
+    width: 71%;
+}
+
+.box-projeto{
+    height: 7%;
+    width: 7%;
+    display: flex;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+
+
+    <link rel="stylesheet" href="./style/fale.css">
+
+
+    <title>Fale-conosco</title>
+</head>
+<body >
+
+    <header>
+        <div class="container" style="position: top;" >
+            <h2 class="logo">Campigotto e Matos Arquitetura</h2>
+            <nav>
+                <a href="../final work/index.html">Home</a>
+                <a href="../final work/projetos.html">Projetos</a>
+                <a href="../final work/sobre.html">Sobre</a>
+                <a href="../final work/fale-conosco.html">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <div class="fale-principal">
+    <h2 style="color: #228B22;">Fale Conosco</h2>
+    <div class="form-container">
+        <form action="action_page">
+          <div class="row">
+            <div class="col-75">
+              <input type="text" id="nome" name="nome" placeholder="nome">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-75">
+                <input type="text" id="email" name="email" placeholder="e-mail">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-75">
+                <input type="text" id="subject" name="subject" placeholder="subject">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-75">
+              <textarea id="mensagem" name="mensagem" placeholder="Mensagem..." style="height:300px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input onclick="Obrigado()" type="submit">
+          </div>
+        </form>
+      </div>
+    </div>
+    </main>
+
+    <script>
+      function Obrigado(){
+        alert("Obrigado!");
+      }
+    </script>
+</body>
+</html>

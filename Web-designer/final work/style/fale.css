@@ -1,0 +1,58 @@
+.fale-principal{
+    display:block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    margin-left: 15%;
+    margin-top: 5%;
+    background-size: cover;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+input[type=text], textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    float: center;
+  }
+
+  input[type=submit] {
+    background-color: #228B22;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+  }
+
+  .form-container {
+    border-radius: 5px;
+    background-color: #141414;
+    padding: 20px;
+    float: center;
+  }
+ 
+  .col-75 {
+    float: center;
+    width: 71%;
+    margin-top: 6px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  

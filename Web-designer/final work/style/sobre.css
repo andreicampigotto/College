@@ -1,0 +1,33 @@
+.sobre-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%);
+
+    height: 81%;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sobre-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    text-align:center;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+
+.sobre-principal .titulo{
+    text-align:center;
+    color: #228B22;
+    margin-top: 5%;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container{
+    margin-left: 2px;
+}

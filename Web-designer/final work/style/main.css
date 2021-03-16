@@ -1,0 +1,47 @@
+:root{
+    --verde:  #228B22;
+    --preto:  #141414;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preto);
+    color: white;
+    font-family: 'Arial', Times, serif;
+}
+
+header .container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(197, 196, 196, 50%);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+header .logo{
+    color: var(--verde);
+    font-family: 'Arial Black';
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: rgb(12, 12, 12);
+    margin-right: 10px;
+}
+
+header nav a:hover{
+    color: rgba(214, 212, 212, .50);
+}
+
+.container{
+    margin-left: 2px;
+}
