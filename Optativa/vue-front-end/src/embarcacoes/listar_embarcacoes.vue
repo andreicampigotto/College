@@ -39,6 +39,7 @@
 <script>
 import axios from 'axios'
 axios.defaults.headers.post['Access-Control-Allow-Headers'] ='*';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] ='*';
 export default {
   name: 'listar_embarcacoes',
   data: () => {
@@ -58,9 +59,7 @@ export default {
   methods: {
     remove(id){ 
       axios.delete(`http://localhost:5000/excluir_embarcacao/${id}`,{ crossdomain: true }).then(response => {
-        console.log(response)
-        this.listar_embarcacoes.ativo = false
-        })
+        console.log(response)})
       .catch((error) => {
         console.log(error)
       });

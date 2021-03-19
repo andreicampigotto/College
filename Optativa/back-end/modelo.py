@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
 db.create_all()
 
-##nova = Embarcacao( tipo_embarcacao = "yacht", fabricante = "azimut",
+##nova = Embarcacao(tipo_embarcacao = "yacht", fabricante = "azimut",
 ##                tamanho_pes = "64", nome = "Alda", observacao ="Abastecida G-5", ativo = True)
 
 ##db.session.add(nova)
