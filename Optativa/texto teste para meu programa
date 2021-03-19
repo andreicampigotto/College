@@ -1,0 +1,5 @@
+curl -d '{"nome":"Maria", "tipo_embarcacao":"jetsky", "fabricante": "Seadoo", "tamanho_pes":"1", "observacao":"limpo", "ativo":1}' -X POST -H "Content-Type:application/json" localhost:5000/incluir_embarcacao
+
+
+curl -d '{"tipo_embarcacao":"yacht", "fabricante": "azimut", "tamanho_pes" : "88", "nome" : "Alda", "observacao":"Abastecida G-5", "ativo" : 1}' -X POST -H "Content-Type:application/json" localhost:5000/incluir_embarcacao
+
